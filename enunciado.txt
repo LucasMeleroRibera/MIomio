@@ -1,0 +1,84 @@
+Examen DIW 2ª Evaluación - Node
+
+IES. Ribera del Tajo.
+
+Ribera Concesionarios
+Ribera Concesionarios, concesionario multimarca, necesita un API, con Node y Sequelize, para
+gestionar la información de los clientes, vehículos, compras de vehículos que se realizan los
+clientes, así como de los fabricantes de los vehículos. También desea controlar el acceso a la
+información de los trabajadores, que son los usuarios que van a manejar la aplicación.
+Los requisitos que se plantean son:
+✓ De cada una de las compras se necesita conocer la fecha y el precio al que compra un
+vehículo un cliente.
+✓ Un vehículo solo es fabricado por un fabricante.
+Modelo de Datos
+Las informaciones que necesitamos para el correcto funcionamiento de nuestra API son:
+✓
+✓
+✓
+✓
+✓
+
+Clientes: id_cli, nombre_cli, direccion_cli, fechanac_cli, telefono_cli
+Fabricantes: id_fab, nombre_fab, direccion_fab, telefono_fab.
+Vehículos: id_veh, nombre_veh, unidades_veh, precio_veh
+Usuarios: id_user, nombre_user, apellidos_user, email_user, password_user
+Compras: fecha_compra, precio_compra.
+
+Las claves de las tablas de Cliente, Fabricantes, Vehículos y Usuarios son autoincrementales y
+los datos de todas las tablas son requeridos.
+Usuarios:
+✓ Tendrán que poder registrarse, para posteriormente poder acceder.
+✓ El acceso se realizará, con el correo y la contraseña, que se almacenará cifrada.
+✓ Para los usuarios vamos a utilizar un controlador y un servicio.
+✓ En el caso de que no se pueda acceder obtendremos información detallada del motivo
+por el que no se puede acceder.
+Los accesos a las demás informaciones estarán controlados mediante un token que será
+generado cada vez que el usuario acceda a la aplicación. El token tendrá una duración de 8 horas.
+Y obtendremos información detallada del motivo por el que el acceso con el token no se puede
+realizar, cuando se produzca esta situación.
+Clientes
+✓ Crear un cliente.
+✓ Mostar todos los clientes con todos sus datos.
+Vehículos
+✓ Crear un cliente.
+✓ Mostar todos los vehículos, con todos sus datos.
+✓ Mostar todos los datos de un vehículo, a partir de su nombre.
+✓ Modificar los datos de un vehículo, a partir de su id (Los datos nuevos los eliges tú)
+✓ Borrar un vehículo, a partir de su id.
+Fabricantes
+✓ Crear un fabricante.
+✓ Dado un fabricante, a partir de su id, mostrar los vehículos que tenemos de ese
+fabricante. Del fabricante vamos a mostrar su nombre y de los vehículos vamos a
+mostrar el nombre, el precio y las unidades.
+
+Página 1 de 2.
+
+Examen DIW 2ª Evaluación - Node
+
+IES. Ribera del Tajo.
+
+Compras
+✓ Crear una compra.
+✓ Mostar todas las compras, y de cada compra vamos a mostrar el nombre del vehículo,
+su el nombre del fabricante, el nombre cliente que lo ha comprado, así como la fecha
+de la compra y el precio de compra.
+
+PUNTUACIÓN
+Creación del servidor 0.5 Puntos
+Creación de rutas
+1.25 Puntos
+Creación de modelos 1.75 Puntos
+Gestión de Usuarios: 2.5 Puntos (controlador y servidor)
+Gestión de Clientes:
+0.5 Puntos
+Gestión de Vehículos 1.25 Puntos
+Gestión de Fabricantes 1 Puntos
+Gestión Compras:
+1.25 Puntos
+Para aprobar le examen es necesario que los usuarios puedan realizar peticiones y obtener los
+datos de la petición realizada.
+
+Página 2 de 2.
+
+
